@@ -1,0 +1,142 @@
+@charset "utf-8";
+/** para filtro mas grande */
+
+.CRITERIO {
+    width: 30%;
+    /* Hace que el select ocupe todo el ancho disponible */
+    font-size: 12px;
+    /* Aumenta el tamaño del texto */
+    padding: 10px;
+    /* Agrega espacio interno para hacerlo más grande */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+}
+/* Ajustes específicos para móviles */
+
+@media screen and (max-width: 600px) {
+    .CRITERIO {
+        font-size: 18px;
+        /* Texto más grande en pantallas pequeñas */
+        padding: 12px;
+        /* Más espacio en móviles */
+    }
+}
+.DATO {
+    width: 20%;
+    /* Ocupa todo el ancho disponible */
+    font-size: 16px;
+    /* Aumenta el tamaño del texto */
+    padding: 10px;
+    /* Espaciado interno para que sea fácil de tocar */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    border: 1px solid #ccc;
+    /* Borde sutil */
+    box-sizing: border-box;
+    /* Evita que el padding afecte el ancho total */
+}
+/* Ajustes específicos para móviles */
+
+@media screen and (max-width: 600px) {
+    .DATO {
+        font-size: 18px;
+        /* Texto más grande */
+        padding: 12px;
+        /* Más espacio interno */
+    }
+}
+#buscar {
+    width: 10%;
+    /* Ocupa todo el ancho disponible */
+    font-size: 16px;
+    /* Aumenta el tamaño del texto */
+    padding: 12px;
+    /* Espaciado interno para hacerlo más fácil de tocar */
+    background-color: #007bff;
+    /* Color de fondo azul */
+    color: white;
+    /* Texto en color blanco */
+    border: none;
+    /* Quita el borde predeterminado */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+    transition: background 0.3s ease-in-out;
+    /* Efecto suave al pasar el mouse */
+}
+/* Efecto hover en pantallas grandes */
+
+#buscar:hover {
+    background-color: #0056b3;
+    /* Azul más oscuro al pasar el mouse */
+}
+/* Ajustes específicos para móviles */
+
+@media screen and (max-width: 600px) {
+    #buscar {
+        font-size: 18px;
+        /* Texto más grande */
+        padding: 14px;
+        /* Más espacio interno */
+    }
+}
+
+/** para botones de link opciones */
+/** **/
+
+/* Contenedor flexible para alinear los botones */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones bajen de línea si no caben */
+    gap: 8px; /* Espacio entre botones */
+    justify-content: left; /* Centra los botones horizontalmente */
+}
+
+/* Estilos de los botones */
+.easyui-linkbutton {
+    flex: 1; /* Hace que los botones tengan el mismo tamaño */
+    min-width: 120px; /* Evita que se encojan demasiado */
+    max-width: 200px; /* Limita el ancho para mantener proporciones */
+    text-align: Left; /* Centra el texto */
+    font-size: 12px; /* Tamaño del texto */
+    padding: 12px; /* Espaciado interno */
+    background-color: #007bff; /* Color azul por defecto */
+    color: white; /* Texto en blanco */
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: background 0.3s ease-in-out; /* Suaviza el cambio de color */
+}
+
+
+/* Espacio extra entre la primera y segunda fila */
+.btn-container.reportes {
+    margin-top: 16px; /* Espacio entre filas de botones */
+}
+
+/* Diferentes colores según la acción */
+.easyui-linkbutton.icon-ok { background-color: #28a745; } /* Verde */
+.easyui-linkbutton.icon-edit { background-color: #ffc107; } /* Amarillo */
+.easyui-linkbutton.icon-remove { background-color: #dc3545; } /* Rojo */
+.easyui-linkbutton.icon-cancel { background-color: #6c757d; } /* Gris */
+
+/* Cambia el color al pasar el mouse */
+.easyui-linkbutton:hover {
+    filter: brightness(90%);
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 600px) {
+    .btn-container {
+        flex-direction: column; /* En móviles, los botones irán en columna */
+    }
+     .btn-container.reportes {
+        margin-top: 20px; /* Aún más espacio en móviles */
+    }
+    .easyui-linkbutton {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        font-size: 18px; /* Texto más grande */
+        padding: 14px; /* Más espacio interno */
+    }
+}
